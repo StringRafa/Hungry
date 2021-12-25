@@ -21,18 +21,22 @@ import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException;
 import com.google.firebase.auth.FirebaseAuthUserCollisionException;
 import com.google.firebase.auth.FirebaseAuthWeakPasswordException;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.panambystudios.hungry.R;
 import com.panambystudios.hungry.helper.ConfigFirebase;
+import com.panambystudios.hungry.helper.UsuarioDatabase;
 import com.panambystudios.hungry.helper.UsuarioFirebase;
 
 public class AuthenticationActivity extends AppCompatActivity {
 
     private Button botaoAcesso;
-    private EditText campoEmail, campoSenha;
+    private EditText campoEmail, campoSenha, campoNome, campoEndereco, campoTelefone;
     private Switch tipoAcesso, tipoUsuario;
     private LinearLayout linearTipoUsuario;
 
     private FirebaseAuth authentication;
+    private DatabaseReference referenceDatabase = FirebaseDatabase.getInstance().getReference();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,13 +52,21 @@ public class AuthenticationActivity extends AppCompatActivity {
         //Verificar usuario logado
         verificarUsuarioLogado();
 
+
+
         tipoAcesso.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked){//Empresa
                     linearTipoUsuario.setVisibility(View.VISIBLE);
+                    campoNome.setVisibility(View.VISIBLE);
+                    campoEndereco.setVisibility(View.VISIBLE);
+                    campoTelefone.setVisibility(View.VISIBLE);
                 }else {//Usuário
                     linearTipoUsuario.setVisibility(View.GONE);
+                    campoNome.setVisibility(View.GONE);
+                    campoEndereco.setVisibility(View.GONE);
+                    campoTelefone.setVisibility(View.GONE);
                 }
             }
         });
@@ -65,6 +77,22 @@ public class AuthenticationActivity extends AppCompatActivity {
 
                 String email = campoEmail.getText().toString();
                 String senha = campoSenha.getText().toString();
+                String nome = campoNome.getText().toString();
+                String endereco = campoEndereco.getText().toString();
+                String telefone = campoTelefone.getText().toString();
+
+                DatabaseReference empresas = referenceDatabase.child("empresas");
+                DatabaseReference usuarios = referenceDatabase.child("usuarios");
+                UsuarioDatabase usuarioDatabase = new UsuarioDatabase(nome, email, endereco, telefone);
+//                FirebaseUser usuarioAtual = authentication.getCurrentUser();
+//                String tipoUsuario = usuarioAtual.getDisplayName();
+
+                if (getTipoUsuario().equals("E")){//Empresa
+                    empresas.push().setValue(usuarioDatabase);
+                }else{//Usuário
+                    usuarios.push().setValue(usuarioDatabase);
+                }
+
 
                 if (!email.isEmpty()){
                     if (!senha.isEmpty()){
@@ -172,6 +200,9 @@ public class AuthenticationActivity extends AppCompatActivity {
     private void inicializaComponentes(){
         campoEmail = findViewById(R.id.editCadastroEmail);
         campoSenha = findViewById(R.id.editCadastroSenha);
+        campoNome = findViewById(R.id.editTextName);
+        campoEndereco = findViewById(R.id.editTextEndereco);
+        campoTelefone = findViewById(R.id.editTextTelefone);
         botaoAcesso = findViewById(R.id.buttonAcesso);
         tipoAcesso = findViewById(R.id.switchAcesso);
         tipoUsuario = findViewById(R.id.switchTipoUsuario);

@@ -107,6 +107,42 @@
             android:textColor="@color/white" />
     </LinearLayout>
 
+    <EditText
+        android:id="@+id/editTextName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_edit_text"
+        android:ems="10"
+        android:hint="Nome"
+        android:inputType="textPersonName|text"
+        android:padding="16dp"
+        android:visibility="gone"
+        tools:visibility="visible" />
+
+    <EditText
+        android:id="@+id/editTextEndereco"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_edit_text"
+        android:ems="10"
+        android:hint="Endereço"
+        android:inputType="text"
+        android:padding="16dp"
+        android:visibility="gone"
+        tools:visibility="visible" />
+
+    <EditText
+        android:id="@+id/editTextTelefone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_edit_text"
+        android:ems="10"
+        android:hint="Telefone"
+        android:inputType="phone"
+        android:padding="16dp"
+        android:visibility="gone"
+        tools:visibility="visible" />
+
     <Button
         android:id="@+id/buttonAcesso"
         style="@style/botaoPadrao"
