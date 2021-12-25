@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Hungry">
         <activity
+            android:name=".activity.CompanyActivity"
+            android:exported="false" />
+        <activity
             android:name=".activity.HomeActivity"
             android:exported="false" />
         <activity
