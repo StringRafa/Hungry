@@ -6,9 +6,13 @@
         <entry key="..\:/Projetos Android/Hungry/app/src/main/res/drawable/bg_edit_text.xml" value="0.3828125" />
         <entry key="..\:/Projetos Android/Hungry/app/src/main/res/layout/activity_authentication.xml" value="0.35260416666666666" />
         <entry key="..\:/Projetos Android/Hungry/app/src/main/res/layout/activity_company.xml" value="0.36666666666666664" />
+        <entry key="..\:/Projetos Android/Hungry/app/src/main/res/layout/activity_config_company.xml" value="0.36666666666666664" />
         <entry key="..\:/Projetos Android/Hungry/app/src/main/res/layout/activity_home.xml" value="0.36666666666666664" />
         <entry key="..\:/Projetos Android/Hungry/app/src/main/res/layout/activity_main.xml" value="0.28940217391304346" />
+        <entry key="..\:/Projetos Android/Hungry/app/src/main/res/layout/activity_new_product_company.xml" value="0.35260416666666666" />
         <entry key="..\:/Projetos Android/Hungry/app/src/main/res/layout/activity_splash.xml" value="0.17831813576494426" />
+        <entry key="..\:/Projetos Android/Hungry/app/src/main/res/layout/toolbar.xml" value="0.36666666666666664" />
+        <entry key="..\:/Projetos Android/Hungry/app/src/main/res/menu/menu_empresa.xml" value="0.36666666666666664" />
       </map>
     </option>
   </component>

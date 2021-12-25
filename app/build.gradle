@@ -44,5 +44,8 @@ dependencies {
     implementation 'com.google.firebase:firebase-database:15.0.0'
     implementation 'com.google.firebase:firebase-auth:15.0.0'
     implementation 'com.google.firebase:firebase-storage:15.0.0'
+
+    /*MaterialSearchView*/
+    implementation 'com.miguelcatalan:materialsearchview:1.4.0'
 }
 apply plugin: 'com.google.gms.google-services'
