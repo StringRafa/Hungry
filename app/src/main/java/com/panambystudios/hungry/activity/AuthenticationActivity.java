@@ -47,7 +47,7 @@ public class AuthenticationActivity extends AppCompatActivity {
 
         inicializaComponentes();
         authentication = ConfigFirebase.getFirebaseAuthentication();
-        authentication.signOut();
+        //authentication.signOut();
 
         //Verificar usuario logado
         verificarUsuarioLogado();

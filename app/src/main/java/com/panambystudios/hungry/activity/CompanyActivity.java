@@ -70,6 +70,7 @@ public class CompanyActivity extends AppCompatActivity {
     private void deslogarUsuario() {
         try {
             authentication.signOut();
+            finish();
         }catch (Exception e){
             e.printStackTrace();
         }

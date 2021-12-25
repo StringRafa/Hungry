@@ -7,16 +7,16 @@ import android.os.Bundle;
 
 import com.panambystudios.hungry.R;
 
-public class ConfigCompanyActivity extends AppCompatActivity {
+public class ConfigUsuarioActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_config_company);
+        setContentView(R.layout.activity_config_usuario);
 
         //Configurações TollBar
         Toolbar toolbar = findViewById(R.id.toolbar);
-        toolbar.setTitle("Configurações");
+        toolbar.setTitle("Configurações usuário");
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }

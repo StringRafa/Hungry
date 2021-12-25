@@ -10,11 +10,17 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Hungry">
         <activity
+            android:name=".activity.ConfigUsuarioActivity"
+            android:exported="false"
+            android:parentActivityName=".activity.HomeActivity"/>
+        <activity
             android:name=".activity.NewProductCompanyActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".activity.CompanyActivity" />
         <activity
             android:name=".activity.ConfigCompanyActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".activity.CompanyActivity" />
         <activity
             android:name=".activity.CompanyActivity"
             android:exported="false" />
