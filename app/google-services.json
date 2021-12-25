@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "541056038140",
+    "project_id": "hungry-aa4b7",
+    "storage_bucket": "hungry-aa4b7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:541056038140:android:63c6277decbb5d063e9379",
+        "android_client_info": {
+          "package_name": "com.panambystudios.hungry"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "541056038140-u8cg2ffh9nf38l26pbqcel5n9skrtden.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.panambystudios.hungry",
+            "certificate_hash": "42745f8cde9d9359790e6f99ab8e5837a4ce10fa"
+          }
+        },
+        {
+          "client_id": "541056038140-vnckvah5dn96pj7bt7e1rmtlq72j51g7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCktICaeHYzUBx3UxLYRIeR-l2IC-bm8zo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "541056038140-vnckvah5dn96pj7bt7e1rmtlq72j51g7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
